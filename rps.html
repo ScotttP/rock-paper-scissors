@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
     <script>
+        let rpsArray = ['rock','paper','scissors']
+        let getRandom = rpsArray[Math.floor(Math.random() * rpsArray.length)];
+
+        function computerPlay(){
+            document.getElementById('quote').innerHTML = getRandom;
+        }
+        
+        
         
     </script>
 </html>
