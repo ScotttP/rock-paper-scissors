@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html> <div id='rock-paper-scissors'></div>
     <script>
-        let rpsArray = ['rock','paper','scissors']
-        let getRandom = rpsArray[Math.floor(Math.random() * rpsArray.length)];
-
         function computerPlay(){
-            document.getElementById('quote').innerHTML = getRandom;
+            let rpsArray = ['rock','paper','scissors']
+            let getRandom = rpsArray[Math.floor(Math.random() * rpsArray.length)];
+            document.getElementById('rock-paper-scissors').innerHTML = getRandom;
+            return getRandom;
         }
+
+        function playRound(playerSelection,computerSelection){
+            if(playerSelection == 'rock' && computerSelection=='scissors' ||
+            playerSelection =='scissors' && computerSelection=='paper' ||
+            playerSelection == 'paper'&& computerSelection=='rock'){
+                return 'You Win!';
+            }else if (playerSelection == 'scissors' && computerSelection=='rock' ||
+            playerSelection =='paper' && computerSelection=='scissors' ||
+            playerSelection == 'rock'&& computerSelection=='paper'){
+                return 'You Lose.';
+            }else{
+                return 'It\'s a tie.';
+            }   
+        }   
+        const playerSelection = 'rock'
+        const computerSelection = computerPlay()
+        console.log(playRound(playerSelection, computerSelection))
+
         
         
+        
+        
+
         
     </script>
 </html>
