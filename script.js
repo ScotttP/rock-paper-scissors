@@ -43,7 +43,7 @@ function game (){
     
     
     document.getElementById('playerScore').innerHTML = `${playerScore}`;
-    document.getElementById('computerScore').innerHTML = `${computerScore}`;
+    document.getElementById('computerScore').innerHTML =`${computerScore}`;
 }
 
 function computerPlay () { // creates random generation of computer's choice
